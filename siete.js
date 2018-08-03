@@ -24,9 +24,40 @@ function mostrar()
 		}
 
 		edad=prompt("Ingrese edad");
-
 		edad=parseInt(edad);
-		while()
+		while(isNaN(edad)|| edad<0 || edad>100)
+		{
+			edad= prompt("ingrese edad");
+			edad= parseInt(edad);
+		}
+
+		nota= parseInt(nota);
+		nota= prompt("ingrese nota");
+		while(isNaN(nota)|| nota<0 || nota>10)
+		{
+			nota= prompt("ingrese nota");
+			nota= parseInt(nota);
+		}	
+		if(contador==1)
+		{
+			peorNota=nota;
+			peorNotaSexo=nota;
+			masViejo=edad;
+			masViejoNombre=nombre;
+		}
+		else
+		{
+			if(nota<peorNota)
+			{
+				peorNota=nota;
+				peorNotaSexo=nota;
+			}
+			if(edad>masViejo)
+			{
+				masViejo=edad;
+				masViejoNombre=nombre;
+			}
+		}
 	}
 
 }
